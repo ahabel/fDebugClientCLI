@@ -1,0 +1,11 @@
+fDebug Client Changes
+=====================
+
+Version 0.2
+-----------------
+- Several Bugfixes
+- Implemented new option --match for filtering out not matching messages (using fnmatch)
+
+Version 0.1-alpha
+-----------------
+Initial Version
