@@ -1,0 +1,122 @@
+.TH FDEBUG 1 "Jun 2010"
+.SH NAME
+fdebug \- fDebug Client
+
+
+.SH SYNOPSIS
+.B fdebug
+[
+.I options
+]
+
+
+.SH DESCRIPTION
+.B fDebug
+Commandline Client
+
+
+
+.SH OPTIONS
+fdebug accepts the following options.
+
+.SS Generic Options
+.TP
+\fB-h, --help
+Display a short list with available commands and options
+
+.TP
+\fB-D, --debug
+Force the client to be started in a special Debug Mode.
+This enables an extended output of information like showing received bytes and the received
+json-string from the server. Setting up this directive may not be very useful in productional environments and
+should only be used for debugging purposes.
+
+.TP
+\fB-p, --port \fI[port]
+bind fDebug to a specific port.
+.RS
+If the port directive is not specified, fdebug uses the default port 5005.
+
+.RE
+.TP
+\fB-d, --details
+Detailed fdebug output
+
+.TP
+\fB-V, --variables
+Show list of variables that were available when the site was processed
+
+.TP
+\fB-S, --control
+Display the internal control messages like handshaking information and connection quits
+
+.TP
+\fB-s, --strict
+Enable the strict mode.
+It forces the client to ask for accepting each new incoming connection request.
+
+.SS Message Filters
+If a filter flag is specified, messages with other filter types will be ignored.
+All filters flags can be used in addition.
+
+For example, you can use the -we flags to display only warnings and error messages.
+If no filters are specified, all messages will be displayed. This is the default.
+
+.TP
+\fB-m, --message
+Show messages
+
+.TP
+\fB-w, --warning
+Show warnings
+
+.TP
+\fB-e, --error
+Show errors
+
+.TP
+\fB-f, --fatal
+Show fatal errors
+
+
+.SS Extended Message Filtering:
+If the simple message filter options don't come up to scratch for you, the extended filter
+settings can be used to filter the output more exactly or even more restrictive.
+
+Therefore, the following commands could give you some more capabilities:
+
+.TP
+\fB--match
+hmm
+
+.SH EXAMPLES
+Listen on the default port 5005 and show warning, error and fatal messages only.
+
+.RS
+$ fdebug --warning --error --fatal
+
+.RE
+Show all messages containing the keyword 'finished' (this would include warnings, errors and fatals too)
+.RE
+Please note that the pattern is matched case-sensitively
+
+.RS
+$ fdebug --match "*finished*"
+
+.RE
+Display warning messages with detailed information
+
+.RS
+$ fdebug -d -w
+
+.SH REPORTING BUGS
+.RS
+.RE
+Report fDebug bugs to virus-d@fcms.de
+.RE
+fDebug home page: <http://fdebug.de>
+
+
+.SH LICENSE
+freepoint public license (fpl) v1.1: <http://fdebug.de/en/site/license/>
+
