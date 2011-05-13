@@ -70,7 +70,7 @@ bool fDebugClient::init() {
 	this->url      = cJSON_GetObjectItem(payload, "url")->valuestring;
 	
 	if (strcmp(action, "HELO") != 0) {
-		printf("Client did not start with exptected HELO\n");
+		printf("Client did not start with expected HELO\n");
 		return false;
 	}
 	
