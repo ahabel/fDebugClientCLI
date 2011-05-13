@@ -99,7 +99,6 @@ bool fSocket::send(const char *msg) {
 
 void fSocket::close() {
    shutdown(this->clientSock, SHUT_RDWR);
-   //shutdown(this->sock, SHUT_RDWR);
 }
 
 
