@@ -11,6 +11,10 @@
 #include "json/cJSON.h"
 
 #include "config/fdebugconfig.h"
+#include "config/displayfilter.h"
+#include "config/messagefilter.h"
+#include "config/options.h"
+
 #include <fstream>
 
 // XML reader libraries for parsing fDebug Variables
@@ -61,12 +65,9 @@ bool fDebugCli::process(fDebugMessage *message) {
 
 bool fDebugCli::applyFilter(fDebugMessage *message) {
    if (this->config->options.filter) {
-      cJSON * payload = message->getPayload();
-      char *msg = cJSON_GetObjectItem(payload, "message")->valuestring;
-
       switch(this->config->options.filterList.type) {
          case FILTER_FNMATCH: {
-            if (fnmatch(this->config->options.filterList.pattern, msg, 0) == FNM_NOMATCH) {
+            if (fnmatch(this->config->options.filterList.pattern, message->message.c_str(), 0) == FNM_NOMATCH) {
                return false;
             }
             break;
