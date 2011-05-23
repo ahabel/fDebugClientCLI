@@ -170,10 +170,9 @@ public:
 	
 
 private:
+	static fDebugConfig *instance;
+	
 	fDebugConfig() {}
-	fDebugConfig(fDebugConfig const&){};            // copy constructor is private
-	fDebugConfig& operator=(fDebugConfig const&){}; // assignment operator is private
-	static fDebugConfig* m_pInstance;
 	
 	/**
 	 * Print the usage description for fDebug (--help)
