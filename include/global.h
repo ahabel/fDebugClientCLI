@@ -7,7 +7,7 @@
 
 // fDebug Config default settings
 #define DEFAULT_PORT   			 5005
-#define FDEBUG_VERSION        "0.3.1"
+#define FDEBUG_VERSION        "0.3.2"
 
 // fDebug Message Types
 #define FDEBUG_CONTROL     1
