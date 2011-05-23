@@ -10,7 +10,7 @@
 #include "handler/cli/fdebugcli.h"
 #include "json/cJSON.h"
 
-#include "fdebugconfig.h"
+#include "config/fdebugconfig.h"
 #include <fstream>
 
 // XML reader libraries for parsing fDebug Variables

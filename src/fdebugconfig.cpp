@@ -3,7 +3,7 @@
 #include <getopt.h>
 #include <stdlib.h>
 
-#include "fdebugconfig.h"
+#include "config/fdebugconfig.h"
 #include "global.h"
 
 

@@ -14,7 +14,7 @@
 
 #include <netinet/in.h>
 #include "fdebugmessage.h"
-#include "fdebugconfig.h"
+#include "config/fdebugconfig.h"
 
 #include "libxml2/libxml/tree.h"
 

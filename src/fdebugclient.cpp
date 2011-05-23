@@ -7,7 +7,7 @@
 
 #include "fsocket/fsocket.h"
 #include "fdebugexception.h"
-#include "fdebugconfig.h"
+#include "config/fdebugconfig.h"
 #include "fdebugclient.h"
 #include "fdebugmessage.h"
 #include "handler/cli/fdebugcli.h"

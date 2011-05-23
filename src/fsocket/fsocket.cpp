@@ -9,7 +9,7 @@
 #include "global.h"
 #include "fdebugexception.h"
 #include "fsocket/fsocket.h"
-#include "fdebugconfig.h"
+#include "config/fdebugconfig.h"
 
 const int MAX_CONNECTIONS = 1;
 

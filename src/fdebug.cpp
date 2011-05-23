@@ -4,11 +4,12 @@
 #include <stdlib.h>
 #include <stdio.h>
 
+#include "global.h"
 #include "fsocket/fsocket.h"
 #include "fdebugclient.h"
 #include "json/cJSON.h"
 
-#include "fdebugconfig.h"
+#include "config/fdebugconfig.h"
 #include "fdebugexception.h"
 
 using namespace std;
