@@ -6,24 +6,29 @@
 #include "fdebugconfig.h"
 #include "global.h"
 
-fDebugConfig* fDebugConfig::m_pInstance = NULL;
 
+fDebugConfig* fDebugConfig::instance = NULL;
 fDebugConfig* fDebugConfig::getInstance() {
-   if (!m_pInstance) {  // Only allow one instance of class to be generated.
-      m_pInstance = new fDebugConfig;
+   if (!instance) {  // Only allow one instance of class to be generated.
+      instance = new fDebugConfig;
    }
-   return m_pInstance;
+   return instance;
 }
 
 void fDebugConfig::init(int argc, char **argv) {
 	// set defaults
-	debugOptions options;
+   messageFilter mf;
+   mf.type    = NULL;
+   mf.pattern = NULL;
+   
+   debugOptions options;
 	options.port      = DEFAULT_PORT;
 	options.control   = false;
 	options.details   = false;
 	options.variables = false;
 	options.strict    = false;
 	options.filter    = false;
+	options.filterList = mf;
 	options.debug     = false;
 	
 	displayFilter filter;
@@ -53,7 +58,7 @@ void fDebugConfig::init(int argc, char **argv) {
 	           { "debug",    no_argument,       0, 'D' },
 
 	           { "match",    required_argument, 0, 'M'},
-	          0
+	          {0}
 	      };
 	
 	while (optind < argc) {
@@ -109,10 +114,8 @@ void fDebugConfig::init(int argc, char **argv) {
         	// filter settings
         	case 'M':
             options.filter = true;
-            messageFilter mf;
-            mf.type    = FILTER_FNMATCH;
-            mf.pattern = optarg;
-            options.filterList = mf;
+            options.filterList.type    = FILTER_FNMATCH;
+            options.filterList.pattern = optarg;
         	   break;
 
         	// fallback
