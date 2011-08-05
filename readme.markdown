@@ -9,26 +9,25 @@ fdebug [switches]
     -p, --port           bind to specified port (default: 5005)
     -d, --details        show detailed fDebug output
     -s, --strict         enable strict mode
+                         fdebug will ask for accepting new incoming connections
+    -V, --variables      show variables
+    -S, --control        show control output
     
-                       fdebug will ask for accepting new incoming connections
-  -V, --variables      show variables
-  -S, --control        show control output
-
 Message Filters:
-  If no message filters are specified, all messages will be displayed
-
-  -m, --message        show messages
-  -w, --warning        show warnings
-  -e, --error          show errors
-  -f, --fatal          show fatal errors
-
+    If no message filters are specified, all messages will be displayed
+    
+    -m, --message        show messages
+    -w, --warning        show warnings
+    -e, --error          show errors
+    -f, --fatal          show fatal errors
+    
 Extended Message Filtering:
-  --match              apply filter using the fnmatch() function
-
+    --match              apply filter using the fnmatch() function
+    
 Miscellaneous:
-  -h, --help           display this help
-  -v, --version        show version information
-  -D, --debug          debug mode
+    -h, --help           display this help
+    -v, --version        show version information
+    -D, --debug          debug mode
 
 Usage Examples
 -----
