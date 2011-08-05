@@ -5,7 +5,6 @@ Usage
 -----
 
 fdebug [switches]
-
   -p, --port           bind to specified port (default: 5005)
   -d, --details        show detailed fDebug output
   -s, --strict         enable strict mode
