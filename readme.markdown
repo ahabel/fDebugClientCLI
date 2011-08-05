@@ -51,3 +51,23 @@ Display warning messages with detailed information
     $ fdebug -d -w
 
 
+Output Example
+-----
+
+    $ fdebug
+    Listen on port 5005
+    Waiting for incomming connections...
+    
+    ---------------------------------------------------------------------------------------
+    Connection from fcmstest.ahabel.dev (127.0.0.1) (/de/site/foo.xml)
+    [WARNING]  Changing locale to 'de_DE' failed - using 'de_DE.UTF8' as fallback.
+    [MESSAGE]  Processing language: de
+    [MESSAGE]  no protocol specified - using 'conf://acl/control.xml'
+    [MESSAGE]  SiteSystem: acl file 'conf://acl/control.xml' successfully loaded
+    [MESSAGE]  init complete
+    [FATAL]  File 'foo.xml' not found
+    [WARNING]  Source is empty - cannot send
+    
+    Waiting for incomming connections...
+
+
