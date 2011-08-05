@@ -37,16 +37,17 @@ Usage Examples
 
 Listen on the default port 5005 and show warning, error and fatal messages only.
 
-$ fdebug --warning --error --fatal
+    $ fdebug --warning --error --fatal
 
 
 Show all messages containing the keyword ’finished’ (this would include warnings, errors and fatals too)
 Please note that the pattern is matched case-sensitively
 
-$ fdebug --match "*finished*"
+    $ fdebug --match "*finished*"
 
 
 Display warning messages with detailed information
-$ fdebug -d -w
+
+    $ fdebug -d -w
 
 
