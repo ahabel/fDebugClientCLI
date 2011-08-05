@@ -7,7 +7,7 @@ Usage
 fdebug [switches]
     -p, --port           bind to specified port (default: 5005)
     -d, --details        show detailed fDebug output
-  -s, --strict         enable strict mode
+    -s, --strict         enable strict mode
                        fdebug will ask for accepting new incoming connections
   -V, --variables      show variables
   -S, --control        show control output
