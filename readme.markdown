@@ -14,7 +14,7 @@ fdebug [switches]
     -S, --control        show control output
     
 Message Filters:
-    If no message filters are specified, all messages will be displayed
+If no message filters are specified, all messages will be displayed
     
     -m, --message        show messages
     -w, --warning        show warnings
@@ -22,12 +22,15 @@ Message Filters:
     -f, --fatal          show fatal errors
     
 Extended Message Filtering:
+
     --match              apply filter using the fnmatch() function
     
 Miscellaneous:
+    
     -h, --help           display this help
     -v, --version        show version information
     -D, --debug          debug mode
+
 
 Usage Examples
 -----
