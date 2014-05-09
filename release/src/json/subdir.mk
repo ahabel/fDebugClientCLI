@@ -17,7 +17,7 @@ C_DEPS += \
 src/json/%.o: ../src/json/%.c
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C Compiler'
-	gcc -I../include -O3 -Wall -c -fmessage-length=0 `xml2-config --cflags --libs` -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o"$@" "$<"
+	gcc -I../include -O3 -Wall -c -fmessage-length=0 `xml2-config --cflags --libs` -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
